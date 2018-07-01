@@ -7,7 +7,7 @@
 
 // Mutation function to be passed into bird.brain
 function mutate(x) {
-    if (random(1) < 0.1) {
+    if (random(1) < 0.05) {
         let offset = randomGaussian(0, 0.1);
         let newx = x + offset;
         return newx;

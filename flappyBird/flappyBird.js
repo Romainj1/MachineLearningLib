@@ -3,7 +3,7 @@ let savedBirds = [];
 var pipes = [];
 let counter = 0;
 let slider;
-let espacement = 200
+let espacement = 75
 
 const TOTAL = 500;
 
@@ -23,7 +23,7 @@ function draw() {
         }
         counter ++;
         if (espacement > 75) {
-            espacement-=0.01;
+            espacement;
         }
         for (var i = pipes.length-1 ; i >= 0; i--) {
             pipes[i].update();
