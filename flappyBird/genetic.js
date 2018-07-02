@@ -1,5 +1,3 @@
-
-
 function nextGeneration() {
     GENERATION_NUM ++;
 
