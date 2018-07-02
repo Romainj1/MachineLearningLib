@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>Flappy Bird - ML - GA</title>
+    <title>Flappy Bird - Machine Learning</title>
 
     <meta name="viewport" width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0>
     <script src="../p5/p5.min.js"></script>
@@ -17,7 +17,62 @@
     <script src="./genetic.js"></script>
 
 </head>
+<style>
+.box{
+    display:flex;
+    flex-flow: row nowrap;
+    border:1px solid #e3f2fd;
+    align-items: center;
+}
+.item{
+    display: block;
+    margin: 0px 16px 0px 16px;
+}
+.slider{
+    margin-left: auto;
+    right: 0;
+}
+.inline{
+    display: inline-block;
+    vertical-align: middle;
+}
+.left{
+    left:0;
+}
+</style>
 <body>
+    <h2>Flappy Bird</h2>
+    <h3>Machine learning AI, based on neural Network and genetic algorythm.</h3>
+
+
+        <div class="inline left">
+            <div id="flappyBird">
+            </div>
+        </div>
+        <div class="inline">
+            <div class="box">
+                <p class="item" id="bestScoreText"></p>
+                <div class="item slider" id="resetBestScoreButton">
+                </div>
+            </div>
+            <div class="box">
+                <p class="item" id="generationNumText"></p>
+            </div>
+            <div class="box">
+                <p class="item" id="spacingValueText"></p>
+                <div class="item slider" id="sliderSpacing"></div>
+            </div>
+            <div class="box">
+                <p class="item" id="speedOfGameText"></p>
+                <div class="item slider" id="sliderSpeed"></div>
+            </div>
+            <div class="box">
+                <p class="item" id="PopulationText"></p>
+                <div class="item slider" id="sliderPopulation"></div>
+            </div>
+        </div>
+
+
 
 </body>
 </html>

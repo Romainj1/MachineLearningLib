@@ -7,7 +7,7 @@
 
 // Mutation function to be passed into bird.brain
 function mutate(x) {
-    if (random(1) < 0.05) {
+    if (random(1) < 0.1) {
         let offset = randomGaussian(0, 0.1);
         let newx = x + offset;
         return newx;
@@ -17,7 +17,7 @@ function mutate(x) {
 }
 
 class Bird {
-    constructor(brain) {
+    constructor(brain, doMutation=true) {
         // position and size of bird
         this.y = height / 2;
         this.x = 64;
@@ -32,9 +32,11 @@ class Bird {
         // The Neural Network is the bird's "brain"
         if (brain instanceof NeuralNetwork) {
             this.brain = brain.copy();
-            this.brain.mutate(mutate);
+            if (doMutation) {
+                this.brain.mutate(mutate);
+            }
         } else {
-            this.brain = new NeuralNetwork(5, 8, 2);
+            this.brain = new NeuralNetwork(5, 18, 2);
         }
 
         // Score is how many frames it's been alive
