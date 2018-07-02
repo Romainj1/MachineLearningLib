@@ -42,10 +42,6 @@ class Pipe {
 
     // Has it moved offscreen?
     offscreen() {
-        if (this.x < -this.w) {
-            return true;
-        } else {
-            return false;
-        }
+        return this.x < -this.w;
     }
 }
